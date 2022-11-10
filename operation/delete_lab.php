@@ -1,4 +1,5 @@
 <?php
+if(isset($_GET['id_lab'])){
     include '../connect/connecting.php';
     $idLab = $_GET['id_lab'];
 
@@ -9,12 +10,10 @@
         header("location:../pages/input_lab.php");
         die();
     } else {
-        echo "proses hapus gagal";
+        echo "proses hapus gagal karena data lab digunakan di jadwal";
     }
+}else if(isset($_GET['id_waktu'])){
 
-?>
-
-<?php
     include '../connect/connecting.php';
     $id_waktu = $_GET['id_waktu'];
 
@@ -25,12 +24,10 @@
         header("location:../pages/input_waktu.php");
         die();
     } else {
-        echo "proses hapus gagal";
+        echo "proses hapus gagal karena data waktu digunakan di jadwal";
     }
 
-?>
-
-<?php
+}else if(isset($_GET['id_jadwal'])){
     include '../connect/connecting.php';
     $id_jadwal = $_GET['id_jadwal'];
 
@@ -43,5 +40,5 @@
     } else {
         echo "proses hapus gagal";
     }
-
+}
 ?>

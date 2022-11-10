@@ -77,7 +77,7 @@ if(empty($_SESSION['username'])){
                                     <th scope="row "><?= $no ?></th>
                                     <td><?= $data['lab']; ?></td>
                                     <td>
-                                        <a type="submit" href="../operation/delete_lab.php? id_lab= <?= $data['id_lab'] ?>" name="delete_button" class="btn btn-outline-danger" value="submit" >Delete</a>
+                                        <a type="submit" href="../operation/delete_lab.php? id_lab=<?= $data['id_lab']?>" name="delete_button" class="btn btn-outline-danger" value="submit" >Delete</a>
                                     </td>
 
                                 </tr>

@@ -14,7 +14,7 @@ if($check > 0 ){
     $_SESSION['status'] = "login";
     header("location:../pages/dashboard.php");
 }else{
-    header("location:login.php?message=failed");
+    header("location:../index.php?message=failed");
 }
 
 ?>

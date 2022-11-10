@@ -24,9 +24,6 @@ if(empty($_SESSION['username'])){
 </style>
 
 <body>
-    <script>
-        alert ("Login Berhasil (:");
-    </script>
     <nav class="navbar navbar-expand-lg ">
         <div class="container-fluid ">
             <a class="navbar-brand text-white" href="#">Praktikum IF | 123210181</a>
