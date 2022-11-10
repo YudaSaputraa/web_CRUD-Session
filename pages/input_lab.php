@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(empty($_SESSION['username-reg'])){
+if(empty($_SESSION['username'])){
     header("location:../index.php?message=belum_login");
     
 }

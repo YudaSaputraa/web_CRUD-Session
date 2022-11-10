@@ -16,6 +16,6 @@
             header("location:../pages/jadwal.php");
 
         }else{
-            echo "insert data gagal, coba lagi dan terus coba lagi sampai bosan mencoba";
+            echo "Update data gagal, coba lagi dan terus coba lagi sampai bosan mencoba";
         }
     ?>

@@ -26,7 +26,6 @@
                 <?php
                 if (isset($_GET['message'])) {
                     if ($_GET['message'] == 'failed') {
-
                         echo "Login Gagal! Username atau Password salah.";
                     } elseif ($_GET['message'] == "logout") {
                         echo "Berhasil Logout!.";
@@ -47,7 +46,7 @@
                     <span>Masukkan Password</span>
                 </div>
                 <div class="inputan-button">
-                    <a href="pages/dashboard.php"><input type="submit" value="login"></a>
+                  <input type="submit" value="login">
                 </div>
                 <div class="register">
                     <a class="no-account">Belum Punya Akun?</a>
