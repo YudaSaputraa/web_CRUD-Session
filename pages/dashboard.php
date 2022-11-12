@@ -1,11 +1,12 @@
 <?php
-session_start();
-if(empty($_SESSION['username'])){
+if ($_COOKIE['user'] == "") {
     header("location:../index.php?message=belum_login");
-    
+}
+session_start();
+if (empty($_SESSION['username'])) {
+    header("location:../index.php?message=belum_login");
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,8 +19,8 @@ if(empty($_SESSION['username'])){
     <link rel="stylesheet" href="../style.css">
 </head>
 <style>
-    .main{
-        padding:10%
+    .main {
+        padding: 10%
     }
 </style>
 
@@ -31,14 +32,19 @@ if(empty($_SESSION['username'])){
                 <span class="navbar-toggler-icon"></span>
             </button>
             <span class="navbar-text">
-                <a class="nav-link text-white" href="../operation/logout.php">Logout</a>
+                <a class="nav-link text-secondary" href="../operation/logout.php">Logout</a>
             </span>
         </div>
         </div>
     </nav>
 
     <div class="main">
-
+        <div class="warning mb-3" style="font-size: 15px;">
+            <?php
+            include '../connect/connecting.php';
+            echo "Welcome back {$_COOKIE['user']} !";
+            ?>
+        </div>
         <h5>Selamat Datang di</h5>
         <h2>Praktikum Informatika</h2>
         <div class="mt-3 w-100 container">
@@ -52,7 +58,7 @@ if(empty($_SESSION['username'])){
 
             </div>
             <div class="mt-3 row">
-                <a class="text-white col" href="#">
+                <a class="text-white col" href="jadwal.php">
                     <button class="w-100 btn btn-outline-light">Jadwal Praktikum</button>
                 </a>
             </div>

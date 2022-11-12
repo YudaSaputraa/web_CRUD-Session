@@ -1,8 +1,7 @@
 <?php
 session_start();
-if(empty($_SESSION['username'])){
+if (empty($_SESSION['username'])) {
     header("location:../index.php?message=belum_login");
-    
 }
 ?>
 <!DOCTYPE html>
@@ -18,10 +17,11 @@ if(empty($_SESSION['username'])){
 
 </head>
 <style>
-    .main{
-        height: 100vh;
+    .main {
+        height: 80vh;
     }
 </style>
+
 <body>
     <nav class="navbar navbar-expand-lg ">
         <div class="container-fluid ">
@@ -50,8 +50,8 @@ if(empty($_SESSION['username'])){
             </div>
         </div>
     </nav>
-    <div class="main">
-        <div class="mt-3 w-100 container">
+    <div class="main mt-3">
+        <div class="w-100 container">
             <div class="row">
                 <div class="col">
                     <table class="table text-white fs-4 text-center ">
@@ -82,6 +82,15 @@ if(empty($_SESSION['username'])){
                     <?php $no++;
                             } ?>
                     </table>
+                    <div class="warning text-center" style="font-size: 15px;">
+                        <?php
+                        if (isset($_GET['message'])) {
+                            if ($_GET['message'] == 'hapus_gagal') {
+                                echo "proses hapus data waktu gagal karena data waktu digunakan di jadwal";
+                            }
+                        }
+                        ?>
+                    </div>
                 </div>
 
                 <div class="col">

@@ -1,8 +1,11 @@
 <?php
+
 session_start();
-if(empty($_SESSION['username'])){
+if (empty($_SESSION['username'])) {
     header("location:../index.php?message=belum_login");
-    
+}
+if ($_COOKIE['user'] == "") {
+    header("location:../index.php?message=belum_login");
 }
 ?>
 <!DOCTYPE html>
@@ -19,8 +22,8 @@ if(empty($_SESSION['username'])){
 
 </head>
 <style>
-    .main{
-        height: 100vh;
+    .main {
+        height: 80vh;
     }
 </style>
 
@@ -77,7 +80,7 @@ if(empty($_SESSION['username'])){
                                     <th scope="row "><?= $no ?></th>
                                     <td><?= $data['lab']; ?></td>
                                     <td>
-                                        <a type="submit" href="../operation/delete_lab.php? id_lab=<?= $data['id_lab']?>" name="delete_button" class="btn btn-outline-danger" value="submit" >Delete</a>
+                                        <a type="submit" href="../operation/delete_lab.php? id_lab=<?= $data['id_lab'] ?>" name="delete_button" class="btn btn-outline-danger" value="submit">Delete</a>
                                     </td>
 
                                 </tr>
@@ -86,6 +89,15 @@ if(empty($_SESSION['username'])){
                     <?php $no++;
                             } ?>
                     </table>
+                    <div class="warning text-center" style="font-size: 15px;">
+                        <?php
+                        if (isset($_GET['message'])) {
+                            if ($_GET['message'] == 'hapus_gagal') {
+                                echo "proses hapus data lab gagal karena data lab digunakan di jadwal";
+                            }
+                        }
+                        ?>
+                    </div>
                 </div>
 
                 <div class="col">

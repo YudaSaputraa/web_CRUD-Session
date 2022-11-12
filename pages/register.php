@@ -9,10 +9,11 @@
     <title>Register Page</title>
 </head>
 <style>
-    .main{
+    .main {
         font-weight: bold;
     }
 </style>
+
 <body>
     <div class="main-login">
         <form method="POST" action="../operation/register_process.php">
@@ -20,7 +21,7 @@
                 <a>Register Page
                     <hr size="1px" width="100%" color="white" />
                 </a>
-                </center>
+            </center>
             <div class="login">
                 <div class="inputan">
                     <input type="text" name="username-reg" required="">
@@ -34,14 +35,12 @@
                     <a href=""><input type="submit" value="Register"></a>
                 </div>
                 <div class="register">
-                    <a class="no-account">Belum Punya Akun?</a>
+                    <a class="no-account">Sudah Punya Akun?</a>
                     <a class="no-account" href="../index.php">Login di sini</a>
                 </div>
             </div>
-        
         </form>
     </div>
-
 </body>
 
 </html>

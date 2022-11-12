@@ -21,20 +21,19 @@
                 <a>Login Page
                     <hr size="1px" width="100%" color="white" />
                 </a>
-           
-            <div class="warning" style="font-size: 15px;">
-                <?php
-                if (isset($_GET['message'])) {
-                    if ($_GET['message'] == 'failed') {
-                        echo "Login Gagal! Username atau Password salah.";
-                    } elseif ($_GET['message'] == "logout") {
-                        echo "Berhasil Logout!.";
-                    } elseif ($_GET['message'] == "belum_login") {
-                        echo "Anda Belum Login!";
+                <div class="warning" style="font-size: 15px;">
+                    <?php
+                    if (isset($_GET['message'])) {
+                        if ($_GET['message'] == 'failed') {
+                            echo "Login Gagal! Username atau Password salah.";
+                        } elseif ($_GET['message'] == "logout") {
+                            echo "Berhasil Logout!.";
+                        } elseif ($_GET['message'] == "belum_login") {
+                            echo "Anda Belum Login!";
+                        }
                     }
-                }
-                ?>
-            </div>
+                    ?>
+                </div>
             </center>
             <div class="login">
                 <div class="inputan">
@@ -46,17 +45,15 @@
                     <span>Masukkan Password</span>
                 </div>
                 <div class="inputan-button">
-                  <input type="submit" value="login">
+                    <input type="submit" value="login">
                 </div>
                 <div class="register">
                     <a class="no-account">Belum Punya Akun?</a>
                     <a class="no-account" href="pages/register.php">Daftar di sini</a>
                 </div>
             </div>
-
         </form>
     </div>
-
 </body>
 
 </html>

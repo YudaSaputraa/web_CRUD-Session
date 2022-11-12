@@ -13,7 +13,6 @@ body{
     justify-content: center;
     font-size: 40px;
     font-family: 'roboto';
-
     flex-direction: column;
     align-items: center;
     color :rgb(231, 231, 231);
@@ -32,10 +31,6 @@ body{
 p{
     font-size: 20px;
 }
-.form-login{
-display: flex;
-flex-direction: column;
-}
 
 .login{
     width: 400px;
@@ -45,15 +40,6 @@ flex-direction: column;
     border-radius: 15px;
 }
 
-.cardd{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 70%;
-    text-align: center;
-    box-sizing: border-box;
-    border-radius: 15px;
-}
 .login .inputan{
     font-family: 'roboto';
     position: relative;
@@ -131,17 +117,12 @@ border-radius: 8px;
     border: 1px solid white;
     border-radius: 10px;
 }
-.button-column{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-}
 
 .no-account{
     font-weight: 100;
     font-size: 13px;
     color: white;
 }
-h2, h5{
+h2, h5, .warning{
     font-family: 'roboto';
 }
